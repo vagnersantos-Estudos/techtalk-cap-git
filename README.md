@@ -19,17 +19,35 @@ Fluxo com o repositório remoto
 
 #Branch
 
+Criar alteranando `git checkout -b nome_branch`
+
+Para ver branches remotas: `git branch -r`
+
+Baixar uma branch remota e ligar com uma branch local: `git checkout -t origin/nome_branch` ou `git branch -t nome_branch origin/nome_branch`
+
+Apagar remotas: `git push origin :nome_branch`
+
+
 ##Diff
 
-Mostrar diferença entre alterações e commits: `git diff`
+Para mostrar a diferença entre alterações e commits: `git diff`
 
 Diferença entre staged e HEAD: `git diff --cached`
 
-Mostrar a diferença entre dois branches `git diff b1 b2`
+Mostrar a diferença entre dois branches `git diff nome_b1 nome_b2`
 
 ##Stash
 
-Parte 7 - Git stash
+Como o próprio nome diz, esconde. Esconde uma alteração, retirando-a do working directory e/ou index e colocando numa área com um label para acessá-la de novo.
+
+Útil quando se quer salvar uma alteração urgente e voltar o código ao original antes de uma correção de emergência.
+
+- `git stash` - esconde
+- `git stash list` - mostra áreas escondidas
+- `git stash pop` - recupera a última área
+- `git stash apply [stash name]` - volta área específica
+- `git stash drop` --> apaga uma área
+- `git stash clear` --> apaga todos os estados.
 
 #Merge
 
@@ -55,6 +73,7 @@ Se houver conflitos, após arrumá-los: `git rebase --continue`
 #Processo de desenvolvimento
 
 ![Git-flow](img/git-flow-overview.jpg)
+
 ![Git-workflow](img/git-workflow.png)
 
 
@@ -68,3 +87,6 @@ Se houver conflitos, após arrumá-los: `git rebase --continue`
     - https://git-scm.com/about/staging-area
 - Tutoriais
     - https://www.sonassi.com/knowledge-base/our-magento-git-guide-and-work-flow/
+- Curso alura de git
+    - Parte 4 - Branches
+    - Parte 7 - Git stash
