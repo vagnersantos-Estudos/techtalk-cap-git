@@ -2,7 +2,7 @@
 
 Isso não é um tutorial básico sobre git. Tento atacar as principais dúvidas que me surgiram quando comecei a utilizar o Git: fluxo do git, branch e merge.
 
-Esses dois assuntos eu tento demonstrar com foco no processo de desenvolvimento, não apenas no poder da ferramenta.
+Esses três assuntos eu tento demonstrar com foco no processo de desenvolvimento, não apenas no poder da ferramenta.
 
 #Fluxo Git
 Um repositório git não depende de um repositório remoto. Todo o controle das alterações está na sua mão, localmente. Então a primeira dica é ter o fluxo de um repositório git na mente: 
@@ -10,15 +10,25 @@ Um repositório git não depende de um repositório remoto. Todo o controle das 
 ![Ciclo de vida dos arquivos](img/git-status-lifecycle.png)
 
 "staging area" or "index"
+
 ![Áreas de armazenamento](img/git-working_directory-stage_area-repository.png)
 
 Fluxo com o repositório remoto
+
 ![Fluxo com o repositório remoto](img/git-index_structure.png)
 
 #Branch
 
-git diff b1 b2
-git diff --cached
+##Diff
+
+Mostrar diferença entre alterações e commits: `git diff`
+
+Diferença entre staged e HEAD: `git diff --cached`
+
+Mostrar a diferença entre dois branches `git diff b1 b2`
+
+##Stash
+
 Parte 7 - Git stash
 
 #Merge
@@ -36,6 +46,8 @@ git rebase master
 ```
 
 Troca tudo isso por `git pull --rebase origin master` na própria branch _b1_.
+
+Se houver conflitos, após arrumá-los: `git rebase --continue`
 
 
 
