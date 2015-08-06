@@ -51,10 +51,6 @@ Como o próprio nome diz, esconde. Esconde uma alteração, retirando-a do worki
 
 #Merge
 
-Parte 6 - Rebasing
-
-git pull --rebase origin master
-
 ```
 #!bash
 git checkout master
@@ -66,6 +62,12 @@ git rebase master
 Troca tudo isso por `git pull --rebase origin master` na própria branch _b1_.
 
 Se houver conflitos, após arrumá-los: `git rebase --continue`
+
+
+## Conflitos
+Não tem jeito, tem que resolver os conflitos manualmente. Mas quais?
+
+`git diff --name-only --diff-filter=U`
 
 
 
@@ -80,6 +82,7 @@ Se houver conflitos, após arrumá-los: `git rebase --continue`
 #Veja também
 - Alias
 - github.io
+- [Documento de introdução ao Git do Paulistano](https://goo.gl/xYNC9m)
 
 #Referências
 - Documentação do Git
@@ -87,6 +90,7 @@ Se houver conflitos, após arrumá-los: `git rebase --continue`
     - https://git-scm.com/about/staging-area
 - Tutoriais
     - https://www.sonassi.com/knowledge-base/our-magento-git-guide-and-work-flow/
+- Livro - Controlando versões com Git e GitHub - Alexandre Aquiles e Rodrigo Ferreira - Casa do Código
 - Curso alura de git
     - Parte 4 - Branches
     - Parte 7 - Git stash
