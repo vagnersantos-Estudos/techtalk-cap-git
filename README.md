@@ -1,6 +1,6 @@
 #Introdução
 
-Isso não é um tutorial básico sobre git. Tento atacar as principais dúvidas quando se começa a utilizar o Git profissionalmente: fluxo do git, branch e merge.
+Isso não é um tutorial básico sobre git. Tento atacar as principais dúvidas que me surgiram quando comecei a utilizar o Git: fluxo do git, branch e merge.
 
 Esses dois assuntos eu tento demonstrar com foco no processo de desenvolvimento, não apenas no poder da ferramenta.
 
@@ -24,6 +24,18 @@ Parte 7 - Git stash
 #Merge
 
 Parte 6 - Rebasing
+
+git pull --rebase origin master
+
+```
+#!bash
+git checkout master
+git pull origin master
+git checkout b1
+git rebase master
+```
+
+Troca tudo isso por `git pull --rebase origin master` na própria branch _b1_.
 
 
 
