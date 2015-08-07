@@ -51,6 +51,14 @@ Como o próprio nome diz, esconde. Esconde uma alteração, retirando-a do worki
 
 #Merge
 
+O merge, cria um commit de merge, onde pega as alterações feitas em um branch e une com outro, seja local ou remoto.
+
+O rabase, realinha os commits no momento que estiver unindo dois branches.
+
+Para branches remotos o pull faz merge automático, utiliza-se a opção `--rabase` para fazer rabase ao invés de merge.
+
+É comum executar vários comandos para buscar as alterações de uma branch remota.
+
 ```
 #!bash
 git checkout master
@@ -59,7 +67,7 @@ git checkout b1
 git rebase master
 ```
 
-Troca tudo isso por `git pull --rebase origin master` na própria branch _b1_.
+Mas, às vezes, tudo que se quer é atualizar a branch em manutenção, para continuar um trabalho, então pode-se fazer: `git pull --rebase origin master` direto na branch.
 
 Se houver conflitos, após arrumá-los: `git rebase --continue`
 
