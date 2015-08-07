@@ -4,7 +4,7 @@
 ```
 mkdir proj1
 cd proj1
-cat "linha 1 - inicial" > f1.md
+echo "linha 1 - inicial" > f1.md
 git status
 git init
 git status
@@ -18,9 +18,9 @@ git commit -m "commit inicial"
 
 - Mostrar a area de stage - _staged_ e _working directory_
 ```
-cat "linha 1 - arquivo 2" > f2.md
+echo "linha 1 - arquivo 2" > f2.md
 mkdir dir1
-cat "linha 1 - inicial - commit inicial" > f1.md
+echo "linha 1 - inicial - commit inicial" > f1.md
 git status
 ```
 - Stash
@@ -81,7 +81,7 @@ git status
 - Criar branch local - **voltar para proj1**
 ```
 git branch b1
-cat "linha 2" >> f1.md
+echo "linha 2" >> f1.md
 git status
 git commit -m "Commit linha 2 no branch"
 git log -1
@@ -89,7 +89,7 @@ git log -1
 
 ```
 git branch master
-cat "linha 1" >> f2.md
+echo "linha 1" >> f2.md
 git add f2.md
 git status
 git commit -m "Commit f2 linha 1 no master"
@@ -107,7 +107,7 @@ git pull --rebase origin master
 ```
 git branch b1p1
 cat f1.md
-cat "linha 3" >> f1.md
+echo "linha 3" >> f1.md
 git commit -m "Linha 3"
 git pull --rebase origin master
 ```
