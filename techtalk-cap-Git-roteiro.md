@@ -80,7 +80,7 @@ git status
  
 - Criar branch local - **voltar para proj1**
 ```
-git branch b1
+git checkout -b b1
 echo "linha 2" >> f1.md
 git status
 git commit -m "Commit linha 2 no branch"
@@ -88,7 +88,7 @@ git log -1
 ```
 
 ```
-git branch master
+git checkout master
 echo "linha 1" >> f2.md
 git add f2.md
 git status
@@ -99,13 +99,13 @@ git log -1
 
 - Fazer merge - *mostrar método comum do README.md*
 ```
-git branch b1
+git checkout b1
 git pull --rebase origin master
 ```
 
 - Confito - **proj2**
 ```
-git branch b1p1
+git checkout -b b1p1
 cat f1.md
 echo "linha 3" >> f1.md
 git commit -m "Linha 3"
