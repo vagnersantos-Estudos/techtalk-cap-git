@@ -2,8 +2,8 @@
 
 - Criar repositório local
 ```
-mkdir proj1
-cd proj1
+mkdir p1
+cd p1
 echo "linha 1 - inicial" > f1.md
 git status
 git init
@@ -52,10 +52,16 @@ git add .
 git status
 ```
 
+----
+
+_Não mostrei o diff cached_
 - mostrar o **diff**
     - `git diff --cached`
     - `git grep "inicial"`
     - `git grep "linha"`
+
+----
+
 - desfazer tudo
 ```
 ls
@@ -64,6 +70,7 @@ git reset --hard HEAD
 ls
 git status
 ```
+----
 
 - Criar repositório remoto - **mudar de diretório**
     - `git init --bare repo1.git`
@@ -76,9 +83,9 @@ git status
     - `git push origin master`
     - `git push repo2 master`
 - Novo working directory - simular 2 usuários - **mudar de diretório**
-    - `git clone repo1.git proj2`
+    - `git clone repo1.git p2`
  
-- Criar branch local - **voltar para proj1**
+- Criar branch local - **voltar para p1**
 ```
 git checkout -b b1
 echo "linha 2" >> f1.md
@@ -117,6 +124,9 @@ git pull --rebase origin master
     
 - Criar branches remotos `git push b1p1`
 
+----
+_Não mostrei o diff cached_
 - Mostrar alias
     - vim .gitconfig
     - [alias]
+----
