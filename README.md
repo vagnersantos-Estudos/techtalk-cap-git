@@ -88,9 +88,15 @@ Não tem jeito, tem que resolver os conflitos manualmente. Mas quais?
 
 
 #Veja também
-- Alias
-- github.io
+- [GitHub pages](https://pages.github.com/) - interessante para fazer blogs estáticos.
+- Geradores estáticos
+    - [Pelican](http://pelican.readthedocs.org/) - em python
+    - [Jekyll](http://jekyllrb.com/) - em ruby
+    - [outros](https://www.staticgen.com/) - site com vários que estão no github e quantas estrelas
 - [Documento de introdução ao Git do Paulistano](https://goo.gl/xYNC9m)
+- [GitHowTo](http://githowto.com/) - encontrado depois da apresentação - _que pena!_
+- Criar Aliases para encurtar comandos do git
+    - http://githowto.com/aliases
 
 #Referências
 - Documentação do Git
