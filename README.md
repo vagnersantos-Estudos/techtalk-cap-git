@@ -1,10 +1,13 @@
-#Introdução
+# Git & Git Flow
+
+## Introdução
 
 Isso não é um tutorial básico sobre git. Tento atacar as principais dúvidas que me surgiram quando comecei a utilizar o Git: fluxo do git, branch e merge.
 
 Esses três assuntos eu tento demonstrar com foco no processo de desenvolvimento, não apenas no poder da ferramenta.
 
-#Fluxo Git
+## Fluxo Git
+
 Um repositório git não depende de um repositório remoto. Todo o controle das alterações está na sua mão, localmente. Então a primeira dica é ter o fluxo de um repositório git na mente: 
 
 ![Ciclo de vida dos arquivos](img/git-status-lifecycle.png)
@@ -17,7 +20,7 @@ Fluxo com o repositório remoto
 
 ![Fluxo com o repositório remoto](img/git-index_structure.png)
 
-#Branch
+## Branch
 
 Criar alteranando `git checkout -b nome_branch`
 
@@ -28,7 +31,7 @@ Baixar uma branch remota e ligar com uma branch local: `git checkout -t origin/n
 Apagar remotas: `git push origin :nome_branch`
 
 
-##Diff
+### Diff
 
 Para mostrar a diferença entre alterações e commits: `git diff`
 
@@ -36,7 +39,7 @@ Diferença entre staged e HEAD: `git diff --cached`
 
 Mostrar a diferença entre dois branches `git diff nome_b1 nome_b2`
 
-##Stash
+### Stash
 
 Como o próprio nome diz, esconde. Esconde uma alteração, retirando-a do working directory e/ou index e colocando numa área com um label para acessá-la de novo.
 
@@ -49,7 +52,7 @@ Como o próprio nome diz, esconde. Esconde uma alteração, retirando-a do worki
 - `git stash drop` --> apaga uma área
 - `git stash clear` --> apaga todos os estados.
 
-#Merge
+## Merge
 
 O merge, cria um commit de merge, onde pega as alterações feitas em um branch e une com outro, seja local ou remoto.
 
@@ -72,7 +75,8 @@ Mas, às vezes, tudo que se quer é atualizar a branch em manutenção, para con
 Se houver conflitos, após arrumá-los: `git rebase --continue`
 
 
-## Conflitos
+### Conflitos
+
 Não tem jeito, tem que resolver os conflitos manualmente. Mas quais?
 
 `git diff --name-only --diff-filter=U`
@@ -80,14 +84,15 @@ Não tem jeito, tem que resolver os conflitos manualmente. Mas quais?
 
 
 
-#Processo de desenvolvimento
+## Processo de desenvolvimento
 
 ![Git-flow](img/git-flow-overview.jpg)
 
 ![Git-workflow](img/git-workflow.png)
 
 
-#Veja também
+## Veja também
+
 - [GitHub pages](https://pages.github.com/) - interessante para fazer blogs estáticos.
 - Geradores estáticos
     - [Pelican](http://pelican.readthedocs.org/) - em python
@@ -98,7 +103,8 @@ Não tem jeito, tem que resolver os conflitos manualmente. Mas quais?
 - Criar Aliases para encurtar comandos do git
     - http://githowto.com/aliases
 
-#Referências
+## Referências
+
 - Documentação do Git
     - https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
     - https://git-scm.com/about/staging-area
